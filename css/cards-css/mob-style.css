@@ -693,6 +693,7 @@ h2.product__goods-name {
   margin: -1px 0px 0 -17px;
   padding: 13px 56px 9px 63px;
   position: absolute;
+  color: black;
 }
 p.other__product-description:before {
   display: none;
