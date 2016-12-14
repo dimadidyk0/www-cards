@@ -170,6 +170,7 @@
     width: 100%;
   }
   .how-to-play__bg {
+    background: -webkit-radial-gradient(225px, #21559D 0, black 100%) no-repeat;
     background: radial-gradient(225px, #21559D 0, black 100%) no-repeat;
     background: radial-gradient(225px, #21559D 0, black 100%) no-repeat;
     background-position: center top 91px;
