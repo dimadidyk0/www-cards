@@ -499,6 +499,8 @@ img.game-app__img {
 img.game-app__download-link {
     display: block;
     margin: 0 98px 29px;
+    height: 48px;
+    width: 142px;
 
 }
 .team-and-stream {
