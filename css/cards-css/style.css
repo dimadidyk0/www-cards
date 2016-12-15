@@ -887,7 +887,7 @@ h2.product__goods-name {
 span.other__product-span {
     color: #152BFF;
 }
-a.other__button-buy {
+.other__button-buy {
     margin: 30px 0 0 0;
     display: inline-block;
     padding: 9px 47px 6px 51px;
