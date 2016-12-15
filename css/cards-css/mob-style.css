@@ -631,6 +631,136 @@ img.other__product-img {
   background-color: white;
   z-index: 0;
 }
+/* input range */
+.other__range {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 0;
+    height: 46px;
+}
+.other__range:focus {
+  border: none;
+}
+input[type=range] {
+  -webkit-appearance: none; 
+  /* Hides the slider so that custom slider can be made */
+  width: 100%; 
+  /* Specific width is required for Firefox. */
+  background: transparent; 
+  /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; 
+  /* Removes the blue border. 
+  You should probably do some kind of focus styling 
+  for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid #3346d2;
+  height: 46px;
+  width: 178px;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+  margin-top: -1px; 
+  /* You need to specify a margin in Chrome, 
+  but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 2px solid #3346d2;
+  height: 46px;
+  width: 178px;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 2px solid #3346d2;
+  height: 46px;
+  width: 178px;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 46px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 30px
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 46px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 30px
+}
+
+input[type=range]::-ms-track {
+ width: 100%;
+  height: 46px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 30px
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+.other__range-value {
+    display: inline-block;
+}
+.other__range-block {
+    position: relative;
+}
+.other__range-text {
+    position: absolute;
+    top: 12px;
+    left: 62px;
+    z-index: -1;
+    color: #152bfe;
+}
+/* /input range */
 h2.product__goods-name {
   font: 33px globerbold;
   padding: 27px 0 0 0px;
@@ -675,26 +805,8 @@ h2.product__goods-name {
   text-transform: uppercase;
   color: black;
   border: 1px solid gray;
-  height: 48px;
+  height: 44px;
   border-radius: 30px;
-}
-.other__product-value {
-  border: 2px solid transparent;
-  display: inline-block;
-  margin: -1px 0 0 -1px;
-  border-radius: 30px;
-  padding: 13px 64px 9px 60px;
-  cursor: pointer;
-}
-.other__product-value--active {
-  border: 2px solid #3346D2;
-  color: #3346D2;
-}
-.other__product-value.other__product-value--2 {
-  margin: -1px 0px 0 -17px;
-  padding: 13px 56px 9px 63px;
-  position: absolute;
-  color: black;
 }
 p.other__product-description:before {
   display: none;
@@ -1244,20 +1356,37 @@ p.rules__else-good-game {
   line-height: 22px;
   padding-bottom: 68px;
 }
-.rules__count:before, .rules__about-cards:before, .rules__game-mech:before {
+.rules__count:before, 
+.rules__about-cards:before, 
+.rules__game-mech:before {
   top: 25px;  
   content: "";
   position: absolute;
   bottom: -3px;
   width: 343px;
   height: 9px;
-  background-image: -webkit-linear-gradient( 45deg , rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0.1) 74%, #0019FF ); /* For Chrome and Safari */ /* For old Fx (3.6 to 15) */ /* For pre-releases of IE 10*/ /* For old Opera (11.1 to 12.0) */
-  background-image:         linear-gradient( 45deg , rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0.1) 74%, #0019FF ); /* Standard syntax; must be last */
+  background-image: -webkit-linear-gradient( 
+    45deg , 
+    rgba(255, 255, 255, 0) 58%, 
+    rgba(255, 255, 255, 0.1) 74%,
+    #0019FF ); 
+  /* For Chrome and Safari */ /* For old Fx (3.6 to 15) */ 
+  /* For pre-releases of IE 10*/ /* For old Opera (11.1 to 12.0) */
+  background-image: linear-gradient( 
+    45deg , 
+    rgba(255, 255, 255, 0) 58%, 
+    rgba(255, 255, 255, 0.1) 74%, 
+    #0019FF ); 
+  /* Standard syntax; must be last */
 }
-.rules__count, .rules__about-cards, .rules__game-mech {
+.rules__count, 
+.rules__about-cards, 
+.rules__game-mech {
   position: relative;
 }
-.rules__count:after, .rules__about-cards:after, .rules__game-mech:after {
+.rules__count:after, 
+.rules__about-cards:after, 
+.rules__game-mech:after {
   top: 33px;
   right: 222px;
   content: "";
@@ -1265,8 +1394,19 @@ p.rules__else-good-game {
   bottom: -3px;
   width: 9px;
   height: 204px;
-  background-image: -webkit-linear-gradient( 45deg , rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0.1) 74%, #0019FF ); /* For Chrome and Safari */ /* For old Fx (3.6 to 15) */ /* For pre-releases of IE 10*/ /* For old Opera (11.1 to 12.0) */
-  background-image:         linear-gradient( 45deg , rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0.1) 74%, #0019FF ); /* Standard syntax; must be last */
+  background-image: -webkit-linear-gradient( 
+    45deg , 
+    rgba(255, 255, 255, 0) 58%, 
+    rgba(255, 255, 255, 0.1) 74%, 
+    #0019FF ); 
+  /* For Chrome and Safari */ /* For old Fx (3.6 to 15) */ 
+  /* For pre-releases of IE 10*/ /* For old Opera (11.1 to 12.0) */
+  background-image: linear-gradient( 
+    45deg , 
+    rgba(255, 255, 255, 0) 58%, 
+    rgba(255, 255, 255, 0.1) 74%, 
+    #0019FF ); 
+  /* Standard syntax; must be last */
 }
 
 
@@ -1440,12 +1580,6 @@ p.rules__else-good-game {
   }
   .other__product-sum {
     width: 290px;
-  }
-  .other__product-value {
-    padding: 13px 55px 9px 55px;
-  }
-  .other__product-value.other__product-value--2 {
-    padding: 13px 40px 9px 40px;
   }
   a.other__button-buy {
     padding: 12px 40px 3px 40px;
