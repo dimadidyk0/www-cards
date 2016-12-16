@@ -361,7 +361,8 @@ h2.how-to-play__header {
     letter-spacing: 3px;
 }
 span.how-to-play__header-span {
-    font-family: globerbold_italic;
+    font-family: globerbold;
+    font-style: italic;
     color: #2836A2;
 }
 p.how-to-play__rules {
