@@ -81,6 +81,7 @@
     flex-direction: column-reverse;
     width: 200px;
     margin: 40px auto 0;
+    padding: 0;
   }
   .header__description {
     position: absolute;
@@ -88,6 +89,7 @@
     font: 20px/22px globerlight;
     left: 83px;
     letter-spacing: 0px;
+    padding: 0;
   }
   .header__condisions-item {
     font: 23px/14px globerlight;
@@ -409,7 +411,7 @@
     background-size: cover;
   }
   img.date-block-2__logo-img {
-    margin-bottom: 16px;
+    margin-bottom: 25px;
   }
   .date-block-2__border-block {
     background: url(../../img/cards-img/m-square-2.png) no-repeat;
