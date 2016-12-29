@@ -17,15 +17,15 @@
 					<div class="header__img-4"></div>
 				</div>
 				<div class="header__main-block">
-					<div class="header__menu">
+					<div id="fix-menu" class="header__menu ">
 						<nav>
 							<ul class="nav">
 
-								<li class="nav-list nav-list-1"><a href="#">Tutorial</a></li>
-								<li class="nav-list nav-list-2"><a href="#">Team &amp; stream</a></li>
-								<li class="nav-list nav-list-3"><a href="#">Events</a></li>
-								<li class="nav-list nav-list-4"><a href="#">Blog</a></li>
-								<li class="nav-list nav-list-actives"><a href="#">Shop</a></li>
+								<li class="nav-list nav-list-1"><a href="#tutirial">Tutorial</a></li>
+								<li class="nav-list nav-list-2"><a href="#team">Team &amp; stream</a></li>
+								<li class="nav-list nav-list-3"><a href="#events">Events</a></li>
+								<li class="nav-list nav-list-4"><a href="#blog">Blog</a></li>
+								<li class="nav-list nav-list-actives"><a href="#shop">Shop</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -34,7 +34,7 @@
 						<img src="img/cards-img/logo-2.svg" alt="" class="logo-img-2">
 					</div>
 					<ul class="header__description">
-						<li class="header__description-item">7 version of the rules</li>
+						<li class="header__description-item">7th edition of game rules	</li>
 						<li class="header__description-item">2 years in developing</li>
 						<li class="header__description-item">X hours of play tests</li>
 					</ul>
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 		</header>
-		<div class="how-to-play">
+		<div id="tutirial" class="how-to-play">
 			<div class="container how-to-play__bg">
 				<div class="how-to-play__container">
 					<p class="how-to-play__upper-text">How to play</p>
@@ -141,7 +141,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="team-and-stream">
+		<div id="team" class="team-and-stream">
 			<div class="container">
 				<div class="container team-and-stream__container">
 					<h2 class="team-and-stream__header">Team &amp; stream</h2>
@@ -230,10 +230,11 @@
 				</div> 
 			</div>
 		</div>
-		<div class="events">
+		<div id="events" class="events">
+			<div class="events__future">
 			<div class="container">
-				<h2 class="events__header">Events</h2>
-				<div class="events__block events__block--1">
+				<h2 class="events__header events__header--future">Future events</h2>
+				<div class="events__block events__block--future">
 					<img src="img/cards-img/events-img.png" alt="" class="events__img">
 					<div class="events__text-block">
 						<h3 class="events__text-header">
@@ -261,9 +262,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="events__color-block">
+			</div>
+			<div class="events__past">
+				<h2 class="events__header events__header--past">Past events</h2>
 				<div class="container">
-					<div class="events__block events__block--2">
+					<div class="events__block events__block--past">
 						<img src="img/cards-img/events-img-2.png" alt="" class="events__img">
 						<div class="events__text-block">
 							<h3 class="events__text-header">
@@ -292,7 +295,7 @@
 					</div>
 				</div>
 				<div class="container">
-					<div class="events__block events__block--3">
+					<div class="events__block events__block--past">
 						<img src="img/cards-img/events-img-3.png" alt="" class="events__img">
 						<div class="events__text-block">
 							<h3 class="events__text-header">
@@ -322,7 +325,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="other">
+		<div id="shop" class="other">
 			<div class="container contaiber-other">
 				<h3 class="other__haader">Other products <img src="img/cards-img/other-header-img.png" alt="" class="other__header-img"></h3>
 				<div class="other__info-block">
@@ -351,7 +354,7 @@
 			</div>
 			<div class="mobile-block other__bottom-white-bg"></div>
 		</div>
-		<div class="blog">
+		<div id="blog" class="blog">
 			<div class="container">
 				<div class="blog__header">
 					<i class="blog__header--icon"></i>
@@ -479,6 +482,7 @@
 			</div>
 
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="js/cards-js/script.js"></script>
 	</body>
 	</html>

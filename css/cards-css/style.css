@@ -219,11 +219,47 @@ body {
 }
 .header__menu {
     padding-left: 140px;
+    position: absolute;
 }
+
+
+/* fixed menu */
+.header__menu--fixed {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 12px 0;
+    background-color: black;
+    background: linear-gradient(to right, #031C3E 20% , #00040A 60%, #031937 90%);
+}
+.header__menu--fixed .nav {
+    width: 1029px;
+    display: block;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 171px;
+    position: relative;
+}
+.header__menu--fixed .nav::before {
+    content: "";
+    background: url(../../img/cards-img/fixex-menu-logo.png) no-repeat;
+    position: absolute;
+    height: 35px;
+    width: 115px;
+    background-size: cover;
+    left: 70px;
+}
+
+/* /fixed menu */
 ul.nav {
     margin-left: -18px;
 }
-.nav-list  {
+.nav-list {
+    display: inline-block;
+}
+.nav-list a {
     font-family: globerbold;
     text-transform: uppercase;
     font-size: 12px;
@@ -234,26 +270,26 @@ ul.nav {
     margin: 2px 1px 0 0;
 }
 
-li.nav-list-1 {
+.nav-list-1 a{
     margin-left: 5px;
 }
-li.nav-list-2 {
+.nav-list-2 a{
     margin-left: 3px;
     margin-right: -6px;
 }
-li.nav-list-3, li.nav-list-4  {
+.nav-list-3 a, .nav-list-4 a {
     margin: 2px 1px 0 0;
 }
-li.nav-list-actives {
+.nav-list-actives a{
     border: 1px solid white;
     padding: 11px 28px 10px 28px;
     margin-left: 12px;
 }
-li.nav-list:hover {
+.nav-list a:hover {
     border-color: white;
 }
 .header__logo {
-    padding-top: 174px;
+    padding-top: 211px;
     padding-left: 199px;
 }
 .logo-img-2 {
@@ -707,19 +743,29 @@ p.best-moment__video-date {
     font: 17px glober_regularregular;
 }
 .events {
-    background: url('../../img/cards-img/BG_EVENT_1920.png') top center no-repeat;
     background-color: black;
-    background-size: auto 601px;
 }
-.events__color-block {
+.events__future {
+    background: -webkit-radial-gradient(600px, #21559D 0, black 100%) no-repeat;
+    background: radial-gradient(600px, #21559D 0, black 100%) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left -150px top;
+}
+.events__past {
     background-color: white;
 }
-h2.events__header {
-    font: 48px globerbold;
+.events__header {
+    font: 50px/70px globerbold;
     text-align: center;
-    padding: 78px 0 92px 0;
-    letter-spacing: 4px;
-    margin-right: -7px;
+    padding: 74px 0 95px 0;
+    letter-spacing: 3.25px;
+}
+.events__header--future {
+    color: white;
+}
+.events__header--past {
+    color: #121B60;
 }
 img.events__img {
     display: inline-block;
@@ -738,14 +784,14 @@ h3.events__text-header {
     font: 29px glober_regularregular;
     letter-spacing: 0.5px;
 }
-.events__block--1 p.events__description {
-    color: #BFBFBF;
-} 
 p.events__description {
     font: 16px/26px glober_regularregular;
     padding: 7px 65px 0 2px;
     letter-spacing: 0.5px;
-    color: rgba(78, 78, 78, 0.85);
+    color: #B0B0B0;
+}
+.events__past .events__description {
+    color: #323232;
 }
 .events__date {
     padding: 25px 0 0 2px;
@@ -814,21 +860,15 @@ img.events__img-fb {
     height: 17px;
     width: 8px;
 }
-.events__block.events__block--1 {
-    height: 364px;
+.events__block {
+    height: 410px;
 }
-.events__block--2 {
+.events__block--past {
     background: white;
-    padding: 85px 0 0px 0;
     color: black;
     overflow: hidden;
 }
-.events__block--3 {
-    background: white;
-    padding: 83px 0 101px 0;
-    color: black;
-}
-.events__block--3 .events__date-text, .events__block--2 .events__date-text {
+.events__block--past .events__date-text {
     color: #3346D2;
 } 
 .other {

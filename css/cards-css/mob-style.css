@@ -490,6 +490,11 @@
     height: 1116px;
     padding: 0;
   }
+  .events__future {
+    background: -webkit-radial-gradient(400px, #21559D 0, black 100%) no-repeat;
+    background: radial-gradient(400px, #21559D 0, black 100%) no-repeat;
+    background-position: top center;
+  }
   h2.events__header {
     font: 33px glober_regularregular;
     text-align: center;
@@ -497,11 +502,11 @@
     letter-spacing: 0px;
     margin-right: 0px;
   }
-  .events__block.events__block--1 {
+  .events__block {
     height: 593px;
     position: relative;
   }
-  .events__block--1 h3.events__text-header {
+  h3.events__text-header {
     font: 19px glober_regularregular;
     letter-spacing: 0;
     position: absolute;
@@ -522,7 +527,7 @@
     font: 15px/21.5px globerlightru;
     padding: 10px 0 0 0;
     letter-spacing: -0.3px;
-    color: rgba(78, 78, 78, 0.85);
+    color: #B0B0B0;
   }
   .events__text-block {
     display: inline-block;
@@ -559,7 +564,7 @@
  .events__button {
    font: 17px globerbold;
  }
- .events__block--1 .events__button--tickets {
+ .events__block--future .events__button--tickets {
   padding: 6px 27px 6px 27px;
   letter-spacing: 0.2px;
 }
@@ -568,31 +573,11 @@
   margin: 0 0 0 11px;
   letter-spacing: 0.2px;
 }
-.events {
-  background-size: auto 688px;
-}
 .events__button--tickets {
   width: 107px;
   padding: 6px 27px 6px 27px;
   letter-spacing: 0.2px;
   text-align: center;
-}
-.events__block--2 {
-  padding: 33px 0 0px 0;
-}
-h3.events__text-header {
-  font: 19px globerbold;
-  letter-spacing: 0;
-  position: absolute;
-  top: 47px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.events__block--3 {
-  padding: 34px 0 154px 0;
-  position: relative;
-  margin: 49px 0 0 0;
 }
 img.other__square {
   display: none;
@@ -1523,7 +1508,7 @@ p.rules__else-good-game {
   .events__button--tickets {
     padding: 6px 20px 6px;
   }
-  .events__block--3 {
+  .events__block--past {
     padding: 34px 0 80px 0;
   }
   .container.contaiber-other {
