@@ -4,6 +4,7 @@
     font: 17px/24px globerregular;
 }
 .privacy__content {
+    position: relative;
     padding-bottom: 200px;
 }
 .privacy__container {
@@ -68,6 +69,7 @@
     padding-bottom: 17px;
     line-height: 20px;
     position: relative;
+    display: block;
 }
 .privacy__sidebar-list-item--current {
     font: 17px/26px globerbold;
@@ -161,6 +163,10 @@
 .fixed {
     position: fixed;
     top: 0;
+}
+.fixed-bottom {
+    position: absolute;
+    top: 100%;
 }
 
 

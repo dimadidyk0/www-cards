@@ -8,17 +8,17 @@
 		document.getElementById("range-text").style.left = String(rangeTextIndent)+"%";
    }
 
-	// window.onscroll = function() {
+	window.onscroll = function() {
 
-	// 	var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-	// 	var fixMenu = document.getElementById("fix-menu");
-	// 	if (scrolled > 110) {
-	// 		fixMenu.classList.add("header__menu--fixed");
-	// 	} else if (scrolled < 110) {
-	// 		fixMenu.classList.remove("header__menu--fixed");
-	// 	} 
+		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+		var fixMenu = document.getElementById("fix-menu");
+		if (scrolled > 110) {
+			fixMenu.classList.add("header__menu--fixed");
+		} else if (scrolled < 110) {
+			fixMenu.classList.remove("header__menu--fixed");
+		} 
 
-	// }
+	}
 
 	$(document).ready(function(){
 		
@@ -31,30 +31,6 @@
     });
 
 });
-	window.onscroll = function() {
-		var topScroll = window.pageYOffset;
-		var privacyMenu = document.querySelector(".privacy__menu");
-		var privacyHeader = document.querySelector(".privacy__header");
-		var privacyMenuHeight = parseInt(window.getComputedStyle(privacyMenu).height);
-		var privacyHeaderHeight = parseInt(window.getComputedStyle(privacyHeader).height);
-		var heightBeforeScroll = privacyMenuHeight + privacyHeaderHeight;
-		var sideBar = document.querySelector(".privacy__sidebar");
-		console.log("topScroll = " ,topScroll);
-		console.log("heightBeforeScroll = " ,heightBeforeScroll);
-		if (topScroll > heightBeforeScroll) {
-			sideBar.classList.add("fixed");
-		} else {
-			sideBar.classList.remove("fixed");
-		}
-		var privacyContent = document.querySelector(".privacy__content");
-		var privacyContentHeight = parseInt(window.getComputedStyle(privacyContent).height);
-		if (topScroll > privacyContentHeight) {
-			sideBar.classList.remove("fixed");
-	}
-
-
-
-
 
 
 
